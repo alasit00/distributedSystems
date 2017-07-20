@@ -1,11 +1,29 @@
 package com.restfulwebservice.restfulwebservice;
 
-public class WeatherData {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class WeatherData {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+	
 	private String cityname;
 	private double temperature;
 	private int pressure;
 	private int humidity;
+	
+	protected WeatherData() {}
+	
+	public WeatherData(String cityname, double temperature, int pressure, int humidity) {
+		this.cityname = cityname;
+		this.temperature = temperature;
+		this.pressure = pressure;
+		this.humidity = humidity;
+	}
 
 	public String getCityname() {
 		return cityname;
