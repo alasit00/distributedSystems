@@ -1,8 +1,6 @@
 package com.restclient.restclient;
 
-
 public class WeatherData {
-	private Long id;
 	
 	private String cityname;
 	private double temperature;
