@@ -42,7 +42,7 @@ public class RestfulwebserviceApplication {
 			log.info("");
 
 			// fetch customers by last name
-			log.info("Customer found with findByLastName('Bauer'):");
+			log.info("Customer found with findByCityname('Stuttgart'):");
 			log.info("--------------------------------------------");
 			for (WeatherData stuttgart : repository.findByCityname("Stuttgart")) {
 				log.info(stuttgart.toString());
